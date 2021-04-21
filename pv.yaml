@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: ee-da-pv1
+  name: da-pv1
 spec:
   capacity:
     storage: 4Gi
@@ -11,7 +11,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   storageClassName: local-storage
   local:
-    path: /home/eernst/volume-testing/da-1
+    path: /tmp/directvolume-testing/da-1
   nodeAffinity:
     required:
       nodeSelectorTerms:
@@ -24,7 +24,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: ee-da-pv2
+  name: da-pv2
 spec:
   capacity:
     storage: 4Gi
@@ -33,7 +33,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   storageClassName: local-storage
   local:
-    path: /home/eernst/volume-testing/da-2
+    path: /tmp/directvolume-testing/da-2
   nodeAffinity:
     required:
       nodeSelectorTerms:
@@ -46,7 +46,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: ee-blk-pv1
+  name: blk-pv1
 spec:
   capacity:
     storage: 4Gi
@@ -56,7 +56,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   storageClassName: local-storage
   local:
-    path: /dev/loop13
+    path: /dev/loop22
   nodeAffinity:
     required:
       nodeSelectorTerms:
@@ -69,7 +69,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: ee-blk-pv2
+  name: blk-pv2
 spec:
   capacity:
     storage: 4Gi
@@ -79,7 +79,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   storageClassName: local-storage
   local:
-    path: /dev/loop14
+    path: /dev/loop23
   nodeAffinity:
     required:
       nodeSelectorTerms:

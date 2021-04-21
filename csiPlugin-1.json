@@ -1,1 +1,1 @@
-{"Device":"/dev/loop13","TargetPath":"/configs","VolumeType":"blk-filesystem","FsType":"ext4"}
+{"Device":"/dev/loop22","TargetPath":"/configs","VolumeType":"blk-filesystem","FsType":"ext4","Options":"ro"}

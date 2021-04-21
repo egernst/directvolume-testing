@@ -1,14 +1,13 @@
-# Create two images: one unmounted (raw block volume), one mounted:
-sudo losetup -D /dev/loop11
-sudo losetup -D /dev/loop12
-sudo losetup -D /dev/loop13
-sudo losetup -D /dev/loop14
+#!/bin/bash
+testdir=/tmp/directvolume-testing
 
-sudo umount /home/eernst/volume-testing/da-1
-sudo umount /home/eernst/volume-testing/da-2
-sudo umount /home/eernst/volume-testing/tmp
-sudo rmdir da-1
-sudo rmdir da-2
-sudo rmdir tmp
+sudo umount "$testdir"/da-1 || true
+sudo umount "$testdir"/da-2 || true
+sudo umount "$testdir"/tmp || true
 
-sudo rm /home/eernst/volume-testing/disk*
+sudo losetup -d /dev/loop20 || true
+sudo losetup -d /dev/loop21 || true
+sudo losetup -d /dev/loop22 || true
+sudo losetup -d /dev/loop23 || true
+
+sudo rm -rf "$testdir"
